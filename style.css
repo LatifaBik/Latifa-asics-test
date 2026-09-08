@@ -1,7 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 30px;
+}
+
 .dropdown {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 10px 15px 10px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 .dropdown input {
@@ -9,7 +16,7 @@
 }
 
 .dropdown label {
-    font-size: 40px;
+    font-size: 25px;
     font-weight: bold;
     cursor: pointer;
 
@@ -17,16 +24,17 @@
     justify-content: space-between;
     align-items: center;
 
-    padding-right: 15px;
+    padding: 5px 15px 5px 0;
 }
 
 .dropdown label::after {
     content: "+";
+    font-size: 26px;
+    font-weight: normal;
 }
 
-.dropdown input:checked + label + .content {
-    max-height: 300px;
-    font-size: 20px;
+.dropdown input:checked + label::after {
+    content: "−";
 }
 
 .dropdown .content {
@@ -34,12 +42,43 @@
     overflow: hidden;
     font-size: 20px;
     transition: max-height 0.6s ease;
+    padding: 0 45px;
 }
 
 .dropdown input:checked + label + .content {
-    display: block;
+    max-height: 220px;
+    
+}
+
+.dropdown .content p {
+    margin: 0 0 15px 0;
+   }
+
+.specification,
+.tillverkare {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.specification span:first-child,
+.tillverkare span:first-child {
+    font-weight: bold;
+}
+
+.recensioner__filledstar {
+    color: gold;
+    font-size: 20px;
+    
+}
+
+.recensioner__emptystar {
+    color: lightgray;
     font-size: 20px;
 }
 
-
+.dropdown .content .recensioner__description {
+    margin-top: 20px;
+}
 

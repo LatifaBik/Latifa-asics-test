@@ -1,29 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
-    <title>Latifas LIA Test</title>
+    <title>LIA Test - Dropdown</title>
 </head>
 
 <body>
-  <div class="dropdown">
-    <input type="checkbox" id="material">
 
-    <label for="material">
-        Material
-    </label>
+    <div class="dropdown">
+        <input type="checkbox" id="produktinformation">
 
-    <div class="content">
-        <p>
-            Materialet som används är en 3D-skrivare,
-            en dator och en mobiltelefon.
-        </p>
+        <label for="produktinformation">
+            Produktinformation
+        </label>
+
+        <div class="content">
+            <p>
+                Produkten är framtagen för enkel och praktisk användning
+                i vardagen. Den har en funktionell design och är tillverkad
+                för att vara både hållbar och användarvänlig.
+            </p>
+
+            <p>
+                Produkten finns i olika storlekar och är utformad för
+                att passa olika användningsområden och behov.
+            </p>
+        </div>
     </div>
-</div>
-    
+
+
+    <div class="dropdown">
+        <input type="checkbox" id="specifikationer">
+
+        <label for="specifikationer">
+            Specifikationer
+        </label>
+
+        <div class="content">
+
+            <div class="specification">
+                <span>Art. nr:</span>
+                <span>12345</span>
+            </div>
+
+            <div class="specification">
+                <span>Vikt:</span>
+                <span>0,5 kg</span>
+            </div>
+
+            <div class="specification">
+                <span>Färg:</span>
+                <span>Svart</span>
+            </div>
+
+            <div class="specification">
+                <span>Storlek:</span>
+                <span>Medium</span>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="dropdown">
+        <input type="checkbox" id="betyg-recensioner">
+
+        <label for="betyg-recensioner">
+            Betyg & recensioner
+        </label>
+
+        <div class="content">
+
+            <span class="recensioner__filledstar">★ ★ ★ ★</span>
+            <span class="recensioner__emptystar">☆</span>
+            Baserat på 9 recensioner
+
+            <p class="recensioner__description">
+                Anna Johansson: "Mycket nöjd med produkten. Den motsvarade mina förväntningar." </p>
+
+        </div>
+    </div>
+
+
+    <div class="dropdown">
+        <input type="checkbox" id="tillverkare">
+
+        <label for="tillverkare">
+            Tillverkare
+        </label>
+
+        <div class="content">
+
+            <div class="tillverkare">
+                <span>Namn:</span>
+                <span>Företag AB</span>
+            </div>
+
+            <div class="tillverkare">
+                <span>Adress:</span>
+                <span>Vintergatan 1, 100 45 Stockholm</span>
+            </div>
+            <div class="tillverkare">
+                <span>Kontakt:</span>
+                <a href="mailto:produkt@foretag.se">produkt@foretag.se</a>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 
