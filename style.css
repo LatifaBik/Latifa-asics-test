@@ -1,0 +1,45 @@
+.dropdown {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.dropdown input {
+    display: none;
+}
+
+.dropdown label {
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-right: 15px;
+}
+
+.dropdown label::after {
+    content: "+";
+}
+
+.dropdown input:checked + label + .content {
+    max-height: 300px;
+    font-size: 20px;
+}
+
+.dropdown .content {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 20px;
+    transition: max-height 0.6s ease;
+}
+
+.dropdown input:checked + label + .content {
+    display: block;
+    font-size: 20px;
+}
+
+
+
