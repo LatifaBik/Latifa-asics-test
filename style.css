@@ -12,7 +12,10 @@ body {
 }
 
 .dropdown input {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
 }
 
 .dropdown label {
@@ -33,7 +36,7 @@ body {
     font-weight: normal;
 }
 
-.dropdown input:checked+label::after {
+.dropdown input:checked + label::after {
     content: "−";
 }
 
@@ -42,14 +45,31 @@ body {
     grid-template-rows: 0fr;
     font-size: 20px;
     padding: 0 45px;
-    transition: grid-template-rows 0.5s ease-in-out;
+    transition: grid-template-rows 0.6s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .dropdown label {
+        font-size: 21px;
+    }
+
+    .dropdown .content {
+        font-size: 17px;
+        padding: 0 15px;
+    }
+
+    .specification,
+    .tillverkare {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
 
 .dropdown .content-inner {
     overflow: hidden;
 }
 
-.dropdown input:checked+label+.content {
+.dropdown input:checked + label + .content {
     grid-template-rows: 1fr;
 }
 
