@@ -33,26 +33,29 @@ body {
     font-weight: normal;
 }
 
-.dropdown input:checked + label::after {
+.dropdown input:checked+label::after {
     content: "−";
 }
 
 .dropdown .content {
-    max-height: 0;
-    overflow: hidden;
+    display: grid;
+    grid-template-rows: 0fr;
     font-size: 20px;
-    transition: max-height 0.6s ease;
     padding: 0 45px;
+    transition: grid-template-rows 0.5s ease-in-out;
 }
 
-.dropdown input:checked + label + .content {
-    max-height: 220px;
-    
+.dropdown .content-inner {
+    overflow: hidden;
+}
+
+.dropdown input:checked+label+.content {
+    grid-template-rows: 1fr;
 }
 
 .dropdown .content p {
     margin: 0 0 15px 0;
-   }
+}
 
 .specification,
 .tillverkare {
@@ -70,7 +73,7 @@ body {
 .recensioner__filledstar {
     color: gold;
     font-size: 20px;
-    
+
 }
 
 .recensioner__emptystar {
@@ -81,4 +84,3 @@ body {
 .dropdown .content .recensioner__description {
     margin-top: 20px;
 }
-
